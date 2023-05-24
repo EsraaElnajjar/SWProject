@@ -1,0 +1,10 @@
+<h1>Departments</h1>
+
+<div class="my-2">
+    <a href = '/departments/create'> Add a new department </a>
+</div>
+
+{{#each departments}}
+    <div> <a href = '/departments/{{_id}}'>   {{name}}    </a> </div>
+   <!-- <h5>Code: {{code}}</h5>-->
+{{/each}}
