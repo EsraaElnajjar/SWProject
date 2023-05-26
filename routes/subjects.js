@@ -7,4 +7,3 @@ router.get('/',index)
 router.get('/create',create)
 router.post('/',store)
 
-export default router;

@@ -13,9 +13,6 @@ const subject = new Schema({
   required:false,
   ref:'department'
 
- }
-
-
 
 
 
