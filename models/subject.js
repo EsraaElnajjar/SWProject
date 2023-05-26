@@ -13,6 +13,7 @@ const subject = new Schema({
   required:false,
   ref:'department'
 
+
  },
 
  doctor:{
@@ -24,6 +25,7 @@ prerequisite: {
   type:String,
   required:true
  },
+
 
 
 },{timestamps: true});
