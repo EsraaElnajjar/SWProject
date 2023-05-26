@@ -17,6 +17,7 @@ router.get('/:_id', show);
 
 
 
+
 router.get('/:id/edit',editDept);
 
 
@@ -30,7 +31,9 @@ router.get('/createDept', async(req, res) => {
 });
 
 
+
 router.put('/:id',update);
 router.delete('/:id',deleteOne)
+
 
 export default router;
