@@ -5,7 +5,6 @@ import dotenv from 'dotenv';
 
 
 
-
 import studentrouter from "./routes/studentroute.js";
 
 
@@ -39,6 +38,14 @@ app.set('views', './templates');
 
 
 app.use('/',authRoutes)
+
+
+app.use('/subjects',authentcation,subjectsRouter);
+app.use('/departments', departmentRouter);
+
+app.listen(process.env.port,()=>{
+    console.log('start the app on http://Localhost '+process.env.port);
+});
 
 app.use('/student2',studentrouter);
 

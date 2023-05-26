@@ -14,7 +14,6 @@ export const register =async(req,res)=>{
     
   await user.create({username,email,password:encryptpassword,types})
 
-
     res.redirect('/login')
 
 
@@ -48,11 +47,11 @@ console.log(email,password,types)
        if ((email==="esraa@gmail.com" && password==="12345") || (email==="alaa@gmail.com" && password==="123") || (email==="aya@gmail.com" && password==="12") || (email==="israa@gmail.com" && password==="1234")){
 
 
-
         res.send("logged in admin")
 
 
        res.redirect('/admin')
+
 
 
      }else{
@@ -60,6 +59,16 @@ console.log(email,password,types)
      }
     
     }else if (types === "student"){
+
+
+        res.send("logged in student");
+    }else{
+        res.send("logged in doctor");
+
+        res.redirect('/student')
+    }else{
+
+
 
 
 

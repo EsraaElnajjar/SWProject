@@ -5,7 +5,6 @@ import { index, create, store, show, editDept, update, deleteOne } from "../cont
 
 import { edit } from "../controllers/subject.js";
 
-
 const router = new Router();
 
 router.get('/', index);
