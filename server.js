@@ -2,6 +2,7 @@ import express from "express";
 import { engine } from 'express-handlebars';
 import methodoverride from 'method-override';
 import dotenv from 'dotenv';
+
 dotenv.config();
 import mongoose from "mongoose";
 import departmentRouter from './routes/departments.js';
@@ -58,3 +59,4 @@ res.render("classdatabase");
 app.listen(process.env.port,()=>{
     console.log('start the app on http://Localhost '+process.env.port);
 });
+
