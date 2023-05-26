@@ -63,3 +63,4 @@ export const editDept = async(req,res)=>{
     await department.findByIdAndDelete(id);
     return res.redirect('/departments')
   };
+

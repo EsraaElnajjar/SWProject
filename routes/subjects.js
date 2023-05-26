@@ -13,13 +13,6 @@ router.get('/:id/edit',edit)
 router.get('/:id',show)
 router.put('/:id',update);
 router.delete('/:id',deleteone)
-router.get('/createDept', async(req, res) => {
-    await department.create({
-        name: 'Information System',
-        code: 'IS'
-    });
-    res.send('All is Done');
-});
 
 export default router;
 

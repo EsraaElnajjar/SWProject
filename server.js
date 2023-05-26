@@ -3,6 +3,7 @@ import { engine } from 'express-handlebars';
 import methodoverride from 'method-override';
 import dotenv from 'dotenv';
 
+
 import studentrouter from "./routes/studentroute.js";
 
 dotenv.config();
@@ -18,6 +19,7 @@ import multer from "multer";
 mongoose.connect(process.env.mongoconnectionurl)
 import subjectsRouter from './routes/subjects.js';
 import authRoutes from './routes/auth.js'
+
 import {authentcation} from './middleware/authentcation.js';
 const app = express();
 app.use(cookieParser())
@@ -26,6 +28,7 @@ app.use(methodoverride('_method'))
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', './templates');
+
 app.use('/',authRoutes)
 
 app.use('/student2',studentrouter);
@@ -123,7 +126,9 @@ app.post("/save-image", upload.single("image"), (req, res) => {
 app.use(express.static("public"));
 
 
+
 app.listen(process.env.port,()=>{
     console.log('start the app on http://Localhost '+process.env.port);
+
 });
 

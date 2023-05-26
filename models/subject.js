@@ -20,11 +20,13 @@ const subject = new Schema({
   type:Schema.Types.ObjectId,
   required:false,
   ref:'user'
+
 },
 prerequisite: {
   type:String,
   required:true
  },
+
 
 
 
