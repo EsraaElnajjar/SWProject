@@ -9,7 +9,7 @@ router.post('/register',register)
 router.get('/login',loginform);
 
 
-router.post('/login',login)
+router.post('/login',login);
 
 
 
