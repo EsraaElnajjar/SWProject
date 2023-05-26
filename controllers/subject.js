@@ -9,6 +9,7 @@ export const index =async(req,res)=>{
     res.render('subjects/index',{subjects});
 
 };
+
 export const create = async(req,res)=>{
     const departments =  await department.find().lean();
     console.log(departments);
@@ -26,6 +27,7 @@ export const store = async (req,res)=>{
     department
   })
 res.redirect('/subjects')
+
 }
 export const show = async (req,res)=>{
   const {id}=req.params;
@@ -57,3 +59,4 @@ export const update = async (req,res)=>{
    
   res.redirect('/subjects')
 };
+
