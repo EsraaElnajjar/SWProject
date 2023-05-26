@@ -5,12 +5,15 @@ import dotenv from 'dotenv';
 
 
 
+
 import studentrouter from "./routes/studentroute.js";
+
 
 dotenv.config();
 import mongoose from "mongoose";
 import departmentRouter from './routes/departments.js';
 import cookieParser from "cookie-parser";
+
 
 
 
@@ -23,6 +26,7 @@ import subjectsRouter from './routes/subjects.js';
 import authRoutes from './routes/auth.js'
 
 
+
 import {authentcation} from './middleware/authentcation.js';
 const app = express();
 app.use(cookieParser())
@@ -31,6 +35,7 @@ app.use(methodoverride('_method'))
 app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 app.set('views', './templates');
+
 
 
 app.use('/',authRoutes)
@@ -137,5 +142,6 @@ app.listen(process.env.port,()=>{
     console.log('start the app on http://Localhost '+process.env.port);
 
 });
+
 
 

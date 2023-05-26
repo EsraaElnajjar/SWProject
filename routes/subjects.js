@@ -6,6 +6,7 @@ import { model } from "mongoose";
 import { create, index,show,store ,edit,update,deleteone} from "../controllers/subject.js";
 
 
+
 const router = new Router();
 router.get('/',index)
 router.get('/create',create)
