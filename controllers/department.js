@@ -40,3 +40,28 @@ export const show = async (req, res) => {
     // 3- render "show" template:
     res.render('departments/show', {singleDepartment});
 }
+
+
+
+
+export const editDept = async(req,res)=>{
+    const {id}=req.params;
+    const editFromDept = await department.findById(id).lean();
+    const departments =  await department.find().lean();
+    console.log(departments);
+  res.render('departments/edit', {departments , department: editFromDept});
+  };
+
+  export const update=async (req,res)=>{
+    const {name,code}= req.body;
+    const {id} = req.params;
+    await department.findByIdAndUpdate(id, {$set:{name, code}});
+     
+    res.redirect('/departments');
+  };
+  export const deleteOne =async (req,res)=>{
+    const {id} =req.params;
+    await department.findByIdAndDelete(id);
+    return res.redirect('/departments')
+  };
+

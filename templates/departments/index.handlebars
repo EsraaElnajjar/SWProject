@@ -5,6 +5,18 @@
 </div>
 
 {{#each departments}}
-    <div> <a href = '/departments/{{_id}}'>   {{name}}    </a> </div>
-   <!-- <h5>Code: {{code}}</h5>-->
+
+    <div class=" d-flex justify-content-between"> <a href = '/departments/{{_id}}'>   {{name}}    </a> 
+    <div class="myDept-2" >
+ <a href='departments/{{_id}}/edit' class="link-dark">
+
+ <h5>Edit</h5></a> 
+
+
+<form action="/departments/{{_id}}?_method=DELETE" method="Post">
+  <button type="submit"class="btn btn-danger btn-sm btn-block"><h3>Delete</h3></button>
+</form>
+</div>
+</div>
+
 {{/each}}
