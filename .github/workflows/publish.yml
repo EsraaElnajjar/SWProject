@@ -26,4 +26,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_IMG_USER }}/chucknorris:latest
+          tags: ${{ secrets.DOCKER_IMG_USER }}/NodejsProjectImage:latest
